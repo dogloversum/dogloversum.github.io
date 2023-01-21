@@ -10,7 +10,7 @@
 ### **In-Class Assignments**
 
 + ICA1
-    [https://github.com/dogloversum/dogloversum.github.io/blob/main/README.md](https://github.com/dogloversum/dogloversum.github.io/blob/main/README.md)
+    [https://dogloversum.github.io/ica/ica1.pdf](https://dogloversum.github.io/ica/ica1.pdf)
 + ICA2
 + ICA3
 + ICA4
