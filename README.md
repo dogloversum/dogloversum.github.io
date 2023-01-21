@@ -10,6 +10,7 @@
 ### **In-Class Assignments**
 
 + ICA1
+    [https://github.com/dogloversum/dogloversum.github.io/blob/main/README.md](https://github.com/dogloversum/dogloversum.github.io/blob/main/README.md)
 + ICA2
 + ICA3
 + ICA4
@@ -28,6 +29,7 @@
 ### **Weekly Assignments**
 
 - WA1
+    [https://dogloversum.github.io/wa/wa1.html](https://dogloversum.github.io/wa/wa1.html)
 - WA2
 - WA3
 - WA4
