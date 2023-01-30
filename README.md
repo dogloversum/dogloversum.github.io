@@ -12,6 +12,7 @@
 + ICA1
     [https://dogloversum.github.io/ica/ica1.pdf](https://dogloversum.github.io/ica/ica1.pdf)
 + ICA2
+    [https://dogloversum.github.io/ica/ica2.pdf](https://dogloversum.github.io/ica/ica1.pdf)
 + ICA3
 + ICA4
 + ICA5
@@ -31,6 +32,7 @@
 - WA1
     [https://dogloversum.github.io/wa/wa1.html](https://dogloversum.github.io/wa/wa1.html)
 - WA2
+    [https://dogloversum.github.io/wa/wa2.html](https://dogloversum.github.io/wa/wa2.html)
 - WA3
 - WA4
 - WA5
