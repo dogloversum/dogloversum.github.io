@@ -14,8 +14,8 @@
 + ICA2
     [https://dogloversum.github.io/ica/ica2.pdf](https://dogloversum.github.io/ica/ica1.pdf)
 + ICA3
-    +[https://dogloversum.github.io/ica/ica3-part2/index.html](https://dogloversum.github.io/ica/ica3-part2/index.html)
-    +[https://dogloversum.github.io/ica/ica3a.html](https://dogloversum.github.io/ica/ica3a.html)
+    [https://dogloversum.github.io/ica/ica3-part2/index.html](https://dogloversum.github.io/ica/ica3-part2/index.html)
+    [https://dogloversum.github.io/ica/ica3a.html](https://dogloversum.github.io/ica/ica3a.html)
 + ICA4
 + ICA5
 + ICA6
