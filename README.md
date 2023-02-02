@@ -36,6 +36,7 @@
 - WA2
     [https://dogloversum.github.io/wa/wa2.html](https://dogloversum.github.io/wa/wa2.html)
 - WA3
+    [https://dogloversum.github.io/wa/wa3.html](https://dogloversum.github.io/wa/wa3.html)
 - WA4
 - WA5
 - WA6
