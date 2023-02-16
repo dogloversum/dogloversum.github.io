@@ -11,15 +11,16 @@
 ### **In-Class Assignments**
 
 + ICA1
-    [https://dogloversum.github.io/ica/ica1.pdf](https://dogloversum.github.io/ica/ica1.pdf)
+    [https://dogloversum.github.io/ica/ica1.pdf](ICA1)
 + ICA2
-    [https://dogloversum.github.io/ica/ica2.pdf](https://dogloversum.github.io/ica/ica1.pdf)
+    [https://dogloversum.github.io/ica/ica2.pdf](ICA2)
 + ICA3
-    [https://dogloversum.github.io/ica/ica3-part2/index.html](https://dogloversum.github.io/ica/ica3-part2/index.html)
-    [https://dogloversum.github.io/ica/ica3a.html](https://dogloversum.github.io/ica/ica3a.html)
+    [https://dogloversum.github.io/ica/ica3-part2/index.html](ICA3 Pt. 2)
+    [https://dogloversum.github.io/ica/ica3a.html](ICA3)
 + ICA4
-    [https://dogloversum.github.io/ica/ica4.html](https://dogloversum.github.io/ica/ica4.html)
+    [https://dogloversum.github.io/ica/ica4.html](ICA4)
 + ICA5
+    [https://dogloversum.github.io/ica/ica5/ica5.html](ICA5)
 + ICA6
 + ICA7
 + ICA8
@@ -34,13 +35,13 @@
 ### **Weekly Assignments**
 
 - WA1
-    [https://dogloversum.github.io/wa/wa1.html](https://dogloversum.github.io/wa/wa1.html)
+    [https://dogloversum.github.io/wa/wa1.html](WA1)
 - WA2
-    [https://dogloversum.github.io/wa/wa2.html](https://dogloversum.github.io/wa/wa2.html)
+    [https://dogloversum.github.io/wa/wa2.html](WA2)
 - WA3
-    [https://dogloversum.github.io/wa/wa3.html](https://dogloversum.github.io/wa/wa3.html)
+    [https://dogloversum.github.io/wa/wa3.html](WA3)
 - WA4
-    [https://dogloversum.github.io/wa/wa4/wa4.html](https://dogloversum.github.io/wa/wa4/wa4.html)
+    [https://dogloversum.github.io/wa/wa4/wa4.html](WA4)
 - WA5
 - WA6
 - WA7
