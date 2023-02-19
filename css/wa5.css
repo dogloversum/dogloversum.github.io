@@ -1,0 +1,27 @@
+.dame {
+    position: relative;
+    width: 67%;
+    margin: auto;
+}
+
+.first {
+    position: absolute;
+    top: 0;
+    left: 30px;
+}
+
+.first img {
+    width: 10%;
+    float: left;
+}
+
+.second {
+    position: absolute;
+    bottom: 15px;
+    right: 230px;
+}
+
+.second img {
+    width: 80%;
+    float: right;
+}
