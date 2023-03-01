@@ -19,7 +19,7 @@
 + [ICA6](https://dogloversum.github.io/ica/ica6/ica6-part1.html)
     [ICA6 Pt. 2](https://dogloversum.github.io/ica/ica6/ica6-part2.html)
     [ICA Pt. 3](https://dogloversum.github.io/ica/ica6/ica6-part3.html)
-+ ICA7
++ [ICA7](https://dogloversum.github.io/ica/ica7.html)
 + ICA8
 + ICA9
 + ICA10
