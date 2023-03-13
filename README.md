@@ -5,7 +5,8 @@
 
 * HTML
     [https://dogloversum.github.io/html-midterm/page5.html](https://dogloversum.github.io/html-midterm/page5.html)
-* CSS
+* [CSS]
+    (https://dogloversum.github.io/)
 * JS
 
 ### **In-Class Assignments**
