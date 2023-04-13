@@ -24,7 +24,7 @@
 + [ICA9](https://dogloversum.github.io/ica/ica9.html)
 + [ICA10](https://dogloversum.github.io/ica/ica10.html)
 + [ICA11](https://dogloversum.github.io/ica/ica11.html)
-+ ICA12
++ [ICA12](https://dogloversum.github.io/ica/ica12/ica12.html)
 + ICA13
 + ICA14
 + ICA15
