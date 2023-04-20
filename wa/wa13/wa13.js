@@ -1,41 +1,41 @@
 
 
 function check() {
-    console.log('test');
+  console.log('test');
 }
 
 function submit() {
-    alert(output.textContent);
+  alert('Your volume is now: ' + output.textContent);
 }
 
 function reset() {
-    outputInt = 0;
-    output.textContent = outputInt;
+  outputInt = 0;
+  output.textContent = outputInt;
 }
 
 function minus() {
-    if (outputInt > 0) {
-    outputInt -=1;
-    output.textContent = outputInt; }
-    
+  if (outputInt > 0) {
+  outputInt -=1;
+  output.textContent = outputInt; }
+  
 }
 
 function plus() {
-    if (outputInt < 100) {
-    outputInt +=1;
-    output.textContent = outputInt;
-    }
+  if (outputInt < 100) {
+  outputInt +=1;
+  output.textContent = outputInt;
+  }
 }
 
 function random() {
-    outputInt = randomNumber(0, 100);
-    output.textContent = outputInt;
+  outputInt = randomNumber(0, 100);
+  output.textContent = outputInt;
 }
 
 function randomNumber(min, max) {
-    const num = Math.floor(Math.random() * (max - min + 1)) + min;
-    return num;
-  }
+  const num = Math.floor(Math.random() * (max - min + 1)) + min;
+  return num;
+}
 
 
 
@@ -57,8 +57,8 @@ let phone_content = document.querySelector('.phone');
 button.addEventListener('click', updateOutput);
 
 function updateOutput() {
-    output.textContent = phone_content.value;
-    alert(phone_content.value);
+  output.textContent = phone_content.value;
+  alert(phone_content.value);
 }
 */
 
