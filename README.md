@@ -43,7 +43,7 @@
 - [WA11](https://dogloversum.github.io/wa/wa11/wa11.html)
 - [WA12](https://dogloversum.github.io/wa/wa12/wa12.html)
 - [WA13](https://dogloversum.github.io/wa/wa13/wa13.html)
-- WA14
+- [WA14](https://dogloversum.github.io/wa/wa134.html)
 - WA15
 
 
