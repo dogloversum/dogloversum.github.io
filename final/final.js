@@ -1,283 +1,308 @@
-//
-//Constants for buttons
-const sleepBtn = document.querySelector("#action-sleep");
-const feedBtn = document.querySelector("#action-feed");
-const playBtn = document.querySelector("#action-play");
-const startBtn = document.querySelector("#action-menu-start-game");
-const settingsBtn = document.querySelector("#action-menu-settings");
-const settingsBackBtn = document.querySelector("#action-settings-back");
-const difHardBtn = document.querySelector("#action-settings-difficulty-hard");
-const difNormalBtn = document.querySelector("#action-settings-difficulty-normal");
-const difEasyBtn = document.querySelector("#action-settings-difficulty-easy");
-const nightModeOffBtn = document.querySelector("#nightmode-off");
-const nightModeOnBtn = document.querySelector("#nightmode-on");
-//
-//Constants for main bar
-const sleepHp = document.querySelector("#sleep-hp");
-const hungerHp = document.querySelector("#hunger-hp");
-const playHp = document.querySelector("#play-hp");
-const scoreBar = document.querySelector("#score");
-//
-//Constants for body
-const effectLeft = document.querySelector("#effect-left");
-const effectRight = document.querySelector("#effect-right");
-const handLeft = document.querySelector("#hand-left");
-const handRight = document.querySelector("#hand-right");
-const eyeLeft = document.querySelector("#eye-left");
-const eyeRight = document.querySelector("#eye-right");
-const mouth = document.querySelector("#mouth");
-//
-//Game settings
-const maxSleep = 300;
-const maxHunger = 300;
-const maxPlay = 300;
-//Game speed
-let day = 20;
 
-//New object
-function Tamagotchi() {
-  this.sleep = maxSleep;
-  this.hunger = maxHunger;
-  this.play = maxPlay;
+//VARIABELS
+
+const catfullImg = document.querySelector('#cat')
+const tunaImg = document.querySelector('#tuna')
+const redtshirtImg = document.querySelector('#sweater')
+var sweaterOn = false
+
+const naamInput = document.querySelector('#name_input')
+
+const greetingText = document.querySelector('#greeting_text')
+
+const textBox = document.querySelector('#food_thanks_text')
+
+const foreGround = document.querySelector('#foreground')
+
+const foreGroundText = document.querySelector('#foreground_text')
+
+const tutorialButton = document.querySelector('#question_mark')
+
+const tutorialText = document.querySelector('#tutorial')
+
+const consoleLogStyle = 'font-weight: bold; font-size: 1.2em'
+
+var standingTimer = false
+
+
+// Hunger bar
+const hungerBarsImg = ['hungerbar.png', 'hungerbar1.png', 'hungerbar2.png', 'hungerbar3.png', 'hungerbar4.png', 'hungerbar5.png', 'hungerbar6.png', 'hungerbar7.png', 'hungerbar8.png', 'hungerbar9.png', 'hungerbar10.png']
+const hungerBar = document.querySelector('#hunger_bar')
+var hungerPoints = 1
+hungerBar.src = './pictures/website_objects/hunger_bar/' + hungerBarsImg[hungerPoints]
+var hungerbarInterval = null
+const eatingAudio = document.querySelector('#eating_audio')
+
+//happiness bar
+const happennisBarsImg = ['happinessbar.png', 'happinessbar1.png', 'happinessbar2.png', 'happinessbar3.png', 'happinessbar4.png', 'happinessbar5.png', 'happinessbar6.png', 'happinessbar7.png', 'happinessbar8.png', 'happinessbar9.png', 'happinessbar10.png']
+const happennisBar = document.querySelector('#happinessbar')
+var happennisPoints = 1
+happennisBar.src = './final/happinessbar.png/' + happennisBarsImg[happennisPoints]
+var happennisInterval = null
+
+//FUNCTIONS
+
+function addingtextbox() {
+    textBox.classList.add("text_box")
+    textBox.classList.remove("disappear")
 }
 
-//Abilities
-Tamagotchi.prototype.actionSleep = function() {
-    this.sleep+=40 / (day * 2)
-};
-
-Tamagotchi.prototype.actionEat = function() {
-	this.hunger+=120 / (day * 2)
-};
-
-Tamagotchi.prototype.actionPlay = function() {
-	this.play+=80 / (day * 2)
-};
-
-Tamagotchi.prototype.tick = function() {
-    this.sleep--;
-    this.hunger-=3;
-    this.play-=2;
-};
-
-let tmgch = new Tamagotchi();
-let sleepHpCount;
-let hungerHpCount;
-let playHpCount;
-let score = 0;
-
-//Controllers
-sleepBtn.addEventListener("click", function() {
-	tmgch.actionSleep();
-});
-
-feedBtn.addEventListener("click", function() {
-	tmgch.actionEat();
-});
-
-playBtn.addEventListener("click", function() {
-	tmgch.actionPlay();
-});
-
-startBtn.addEventListener("click", function() {
-	startGame();
-});
-
-settingsBtn.addEventListener("click", function() {
-	settingsMenu();
-});
-
-difHardBtn.addEventListener("click", function() {
-	day = 5;
-	document.querySelector("#difSet").innerHTML = "Hard";
-});
-
-difNormalBtn.addEventListener("click", function() {
-	day = 20;
-	document.querySelector("#difSet").innerHTML = "Normal";
-});
-
-difEasyBtn.addEventListener("click", function() {
-	day = 40;
-	document.querySelector("#difSet").innerHTML = "Easy";
-});
-
-settingsBackBtn.addEventListener("click", function() {
-	MainMenu();
-});
-
-nightModeOffBtn.addEventListener("click", function() {
-	nightModeOff();
-});
-
-nightModeOnBtn.addEventListener("click", function() {
-	nightModeOn();
-});
-
-//NightMode toggle
-function nightModeOn() {
-	document.querySelector('body').classList.add("nightmode-on");
-	document.querySelector('#nightmode').innerHTML = "on";
+function pandagreeting() {
+    textBox.textContent = 'Welkom' + ' ' + naamInput.value + ' ' + '!';
+    textBox.classList.add('text_box');
+    pandaImg.src = './animated/cat_waving.png';
+    naamInput.classList.add('disappear')
+    setTimeout(pandastart, 1800)
+    foreGround.classList.remove('foregroundstyle')
+    foreGroundText.classList.add('disappear')
 }
 
-function nightModeOff() {
-	document.querySelector('body').classList.remove("nightmode-on");
-	document.querySelector('#nightmode').innerHTML = "off";
+function changingtshirt() {
+    redtshirtOn ^= true; //Bron: https://stackoverflow.com/questions/2479058/how-to-make-a-boolean-variable-switch-between-true-and-false-every-time-a-method/2479339
+    if (redtshirtOn == true) {
+        pandagettingnormal();
+        redtshirtImg.src = './final/cancelsweat.png'
+    } else {
+        pandagettingnormal();
+        redtshirtImg.src = './final/sweater.png'
+    }
 }
 
-//Togglers for buttons
-document.querySelector(".game-screen").classList.toggle("hide");
-document.querySelector(".menu-screen-settings").classList.toggle("hide");
 
-function MainMenu() {
-	document.querySelector(".menu-screen-settings").classList.toggle("hide");
-	document.querySelector(".main-menu-screen").classList.toggle("hide");
+
+function pandagettingnormal() {
+    if (happennisPoints == 0 || hungerPoints == 0) { 
+        pandaissad();
+    } else {
+        if (sweaterOn == true) {
+            pandaImg.src = './final/sweater.png'
+        } else {
+            pandaImg.src = './final/catfull.png';
+        }
+    }
 }
 
-function settingsMenu() {
-	document.querySelector(".main-menu-screen").classList.toggle("hide");
-	document.querySelector(".menu-screen-settings").classList.toggle("hide");
+function pandastart() {
+    pandagettingnormal();
+    textBox.classList.add('disappear')
 }
 
-function startGame() {
-	document.querySelector(".game-screen").classList.toggle("hide");
-	document.querySelector(".main-menu-screen").classList.toggle("hide");
+//Function gerelateerd met de hunger bar//
 
-	//Tamagotchi's name
-	var tamagotchiName = prompt("Please, enter a name of your tamagotchi:", "");
-	document.querySelector("#name").innerHTML = tamagotchiName;
-	if (tamagotchiName == null || tamagotchiName.replace(/\s/g, '') == "") {
-		tamagotchiName = "Tamagotchi";
-		document.querySelector("#name").innerHTML = tamagotchiName;
-	}
+function pandaeating() {
+    hungerPoints = hungerPoints + 1
+    if (hungerPoints > 10) {
+        hungerPoints = hungerBarsImg.length - 1
+        pandarefusingfood();
+    } else {
+        pandaImg.src = './final/cateating.png';
+        if (sweaterOn == true) {
+            pandaImg.src = './final/cateatingsweater.png'
+        }
+        setTimeout(pandathankingfood, 1800)
+        bambooImg.classList.add('disappear')
+        setTimeout(showbamboo, 1800)
+        eatingAudio.currentTime = 0;
+        eatingAudio.play();
+    }
 
-	//Start game
-	core();
-	let coreUpdate = setInterval(core, 100 * day);
+    hungerBar.src = './final/hungerbar/' + hungerBarsImg[hungerPoints]
 
-	//Main function of tamagotchi
-	function core() {
-		//console.log(tmgch);
-		sleepHpCount = (tmgch.sleep / maxSleep * 100).toFixed(2);
-		hungerHpCount = (tmgch.hunger / maxHunger * 100).toFixed(2);
-		playHpCount = (tmgch.play / maxPlay * 100).toFixed(2);
-
-		//Scores
-		score++;
-		scoreBar.innerHTML = score;
-
-		//Death ability
-		if ((playHpCount <= 0) || (sleepHpCount <= 0) || (hungerHpCount <= 0)) {
-			playHpCount = 0;
-			sleepHpCount = 0;
-			hungerHpCount = 0;
-			clearInterval(coreUpdate);
-			alert('Your score: ' + score + '\n ╭(×_×)╮');
-		}
-
-		//Max health percentage (real)
-		//Little help for player
-		if (tmgch.sleep >= (maxSleep + (maxSleep / 100 * 20))) {
-			tmgch.sleep = maxSleep + (maxSleep / 100 * 20);
-		}
-
-		if (tmgch.hunger >= (maxHunger + (maxHunger / 100 * 20))) {
-			tmgch.hunger = maxHunger + (maxHunger / 100 * 20);
-		}
-
-		if (tmgch.play >= (maxPlay + (maxPlay / 100 * 20))) {
-			tmgch.play = maxPlay + (maxPlay / 100 * 20);
-		}
-
-		//Max health percentage (for player)
-		if ((tmgch.sleep / maxSleep * 100) > 100) {
-			sleepHpCount = 100;
-		}
-		if ((tmgch.hunger / maxHunger * 100) > 100) {
-			hungerHpCount = 100;
-		}
-		if ((tmgch.play / maxPlay * 100) > 100) {
-			playHpCount = 100;
-		}
-
-		//Show HP on screen
-		sleepHp.innerHTML = sleepHpCount;
-		hungerHp.innerHTML = hungerHpCount;
-		playHp.innerHTML = playHpCount;
-
-		//Remove HP every tick
-		tmgch.tick();
-
-		//Animations
-
-		//Hunger bar
-		if (hungerHpCount <= 0) {
-			mouth.innerHTML = "_";
-		} else if (hungerHpCount < 20) {
-			mouth.innerHTML = "0";
-		} else if (hungerHpCount < 40) {
-			mouth.innerHTML = "O";
-		} else if (hungerHpCount < 60) {
-			mouth.innerHTML = "o";
-		} else if (hungerHpCount < 80) {
-			mouth.innerHTML = "-";
-		} else if (hungerHpCount > 80) {
-			mouth.innerHTML = "▿";
-		}
-
-		//Sleep bar
-		if (sleepHpCount <= 0) {
-			eyeLeft.innerHTML = "×";
-			eyeRight.innerHTML = "×";
-		} else if (sleepHpCount < 20) {
-			eyeLeft.innerHTML = "◡";
-			eyeRight.innerHTML = "◡";
-			mouth.innerHTML = ".";
-		} else if (sleepHpCount < 40) {
-			eyeLeft.innerHTML = " ´ ";
-			eyeRight.innerHTML = " ` ";
-		} else if (sleepHpCount < 60) {
-			eyeLeft.innerHTML = "●";
-			eyeRight.innerHTML = "●";
-		} else if (sleepHpCount < 80) {
-			eyeLeft.innerHTML = "・";
-			eyeRight.innerHTML = "・";
-		} else if (sleepHpCount > 80) {
-			eyeLeft.innerHTML = "＾";
-			eyeRight.innerHTML = "＾";
-		}
-
-		//Play bar
-		if (playHpCount <= 0) {
-			effectRight.innerHTML = "   ";
-			effectLeft.innerHTML = "   ";
-			handRight.innerHTML = "╮";
-			handLeft.innerHTML = "╭";
-		} else if (playHpCount < 40) {
-			effectRight.innerHTML = "*  ";
-			effectLeft.innerHTML = "   ";
-			handRight.innerHTML = " ";
-			handLeft.innerHTML = " ";
-		} else if (playHpCount < 60) {
-			effectLeft.innerHTML = "   ";
-			effectRight.innerHTML = "   ";
-			handRight.innerHTML = "╮";
-			handLeft.innerHTML = "╭";
-		} else if (playHpCount < 80) {
-			effectLeft.innerHTML = "  ✧";
-			effectRight.innerHTML = "✧  ";
-			handRight.innerHTML = "╭";
-			handLeft.innerHTML = "╮";
-		} else if (playHpCount < 90) {
-			effectLeft.innerHTML = " ˖✧";
-			effectRight.innerHTML = "✧˖ ";
-			handRight.innerHTML = "/";
-			handLeft.innerHTML = "\\";
-		} else if (playHpCount > 90) {
-			effectLeft.innerHTML = "°˖✧";
-			effectRight.innerHTML = "✧˖°";
-			handRight.innerHTML = "◜";
-			handLeft.innerHTML = "◝";
-		}
-	}
+    if (hungerbarInterval == null) {
+        hungerbarInterval = setInterval(() => {
+            pandagettinghungry();
+        }, 15000);
+    }
 }
+
+function showbamboo() {
+    bambooImg.classList.remove('disappear')
+}
+
+function pandagettinghungry() {
+    hungerPoints = hungerPoints - 1
+    if (hungerPoints < 0) {
+        hungerPoints = 0;
+    }
+    if (hungerPoints == 0) {
+        pandaishungry();
+    }
+    hungerBar.src = './final/hungerbar/' + hungerBarsImg[hungerPoints]
+}
+
+function pandathankingfood() {
+    pandatalking();
+    textBox.textContent = 'thank you for the bamboo!' + ' ' + naamInput.value + ' ' + '!';
+    addingtextbox();
+    setTimeout(pandastoptalking, 3000)
+}
+
+function pandarefusingfood() {
+    pandatalking();
+    textBox.textContent = 'im full' + ' ' + naamInput.value + ' ' + '!';
+    addingtextbox();
+    setTimeout(pandastoptalking, 3000)
+}
+
+
+function pandaemotionchange() {
+    happennisPoints = happennisPoints + 1
+    if (happennisPoints > 9) {
+        happennisPoints = happennisBarsImg.length - 1
+    }
+
+    if (happennisInterval == null) {
+        happennisInterval = setInterval(() => {
+            pandagettingbored();
+        }, 15000);
+    }
+    happennisBar.src = './final/happinessbar/' + happennisBarsImg[happennisPoints]
+}
+
+function pandagettingbored() {
+    happennisPoints = happennisPoints - 1
+    happennisBar.src = './final/happinessbar/' + happennisBarsImg[happennisPoints]
+    if (happennisPoints < 0) {
+        happennisPoints = 0;
+        happennisBar.src = './final/happinessbar/' + happennisBarsImg[happennisPoints]
+    }
+
+    if (happennisPoints == 0) {
+        pandaisbored();
+    }
+}
+
+function pandajumping() {
+    pandagoingtojump();
+    setTimeout(() => pandagoingtostand(), 800);
+    pandastanding();
+    pandaImg.classList.add('jump')
+    setTimeout(() => pandaImg.classList.remove('jump'), 800);
+}
+
+
+function pandatalking() {
+    if (redtshirtOn == true) {
+        pandaImg.src = './final/catfull.png'
+    } else {
+        pandaImg.src = './final/catfull.png'
+    }
+}
+
+function pandastoptalking() {
+    if (happennisPoints == 0) {
+        pandaisbored();
+    } else {
+        pandagettingnormal();
+        textBox.classList.add('disappear')
+    }
+}
+
+//cat is...//
+
+function pandaishungry() {
+    textBox.textContent = 'I want some tuna' + ' ' + naamInput.value + '!'
+    addingtextbox();
+    pandaissad();
+}
+
+function pandaisbored() {
+    textBox.textContent = 'Ik verveel me' + ' ' + naamInput.value + '!'
+    addingtextbox();
+    pandaissad();
+}
+
+function pandaissad() {
+    if (redtshirtOn == true) {
+        pandaImg.src = './pictures/panda/panda_red_tshirt_sad.png'
+    } else {
+        pandaImg.src = './pictures/panda/panda_sad.png'
+    }
+}
+
+//panda going to...//
+
+function pandagoingtostand() {
+    if (redtshirtOn == true) {
+        pandaImg.src = './pictures/panda/panda_red_tshirt_standing.png'
+    } else {
+        pandaImg.src = './pictures/panda/panda_standing_default.png'
+    }
+}
+
+function pandagoingtojump() {
+    if (redtshirtOn == true) {
+        pandaImg.src = './pictures/panda/panda_red_tshirt_jumping.png'
+    } else {
+        pandaImg.src = './pictures/panda/panda_jumping.png';
+    }
+}
+
+function pandastanding() {
+    if (standingTimer == false) {
+        standingTimer = true
+        setTimeout(() => pandagettingnormal(), 8000);
+        setTimeout(() => standingTimer = false, 8000);
+    }
+}
+
+function showtutorial() {
+    tutorialText.classList.toggle('disappear')
+    if (tutorialButton.getAttribute('src') === "./pictures/website_objects/tutorial_button/question_button.png") {
+        tutorialButton.src = "./pictures/website_objects/tutorial_button/close_button.png"
+    } else {
+        tutorialButton.src = "./pictures/website_objects/tutorial_button/question_button.png"
+    }
+}
+
+function keyevents(event) {
+    var key = event.key;
+    if (key == 'w') {
+        if (hungerPoints == 0) {
+            textBox.textContent = 'Ik heb geen energie!'
+            pandaissad();
+            addingtextbox();
+        } else {
+            pandajumping();
+            pandaemotionchange();
+            pandagettinghungry();
+            if (redtshirtOn == true) {
+                pandaImg.src = './pictures/panda/panda_red_tshirt_jumping.png'
+                console.log("keyevents")
+            } else {
+                pandaImg.src = './pictures/panda/panda_jumping.png';
+            }
+        }
+    }
+    //KEYS OM DE BARS MANUAL TE VERANDEREN, niet zichtbaar voor gebruiker//
+    if (key == 'o') {
+        pandagettinghungry();
+    }
+
+    if (key == 'p') {
+        pandaeating();
+    }
+
+    if (key == '=') {
+        pandaemotionchange();
+    }
+
+    if (key == '-') {
+        pandagettingbored();
+    }
+}
+
+console.log("%c'o' = hungerbar -1 | 'p' = hungerbar +1 | '=' = hapennisbar +1 | '-' = happennisbar -1 ", consoleLogStyle)
+
+//ADDEVENTLISTENER
+
+
+naamInput.addEventListener('change', pandagreeting);
+
+bambooImg.addEventListener('dragend', pandaeating);
+
+document.addEventListener('keypress', keyevents)
+
+tutorialButton.addEventListener('click', showtutorial)
+
+redtshirtImg.addEventListener('click', changingtshirt)
