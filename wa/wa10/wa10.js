@@ -5,9 +5,9 @@ const btn = document.querySelector('button');
 const overlay = document.querySelector('.overlay');
 
 /* Declaring the array of image filenames */
-const pictures = ['./blazerz.jpg', './blazerz.jpg', './blazerz.jpg', './blazerz.jpg', './blazerz.jpg'];
+const pictures = ['./smudgo.jpg', './borbis.JPG', './fresh.jpg', './smudgo.jpg', './spwing.JPG'];
 /* Declaring the alternative text for each image file */
-const alts = ['People laying on rocks', 'Ancient building ', 'Wheat Fields', 'Tropical Beach', 'Ice in Ocean']
+const alts = ['The Blazers', 'Boris ', 'Fresh haircut', 'Smudge', 'Spring time']
 
 function setDisplay(p, a) {
     displayedImage.setAttribute('src', p);
