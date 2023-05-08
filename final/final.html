@@ -1,113 +1,157 @@
 <!DOCTYPE html>
-<!-- saved from url=(0022)http://127.0.0.1:5500/ -->
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href=".../final.css">
-    <title>Panda</title>
+    <link rel="stylesheet" href="./files/final.css">
+    <title>Cat</title>
 </head>
 
 <body>
-<!---
-        <div id="foreground" class="foregroundstyle"></div>
-    -->
-        
 
-    <input type="text" id="name_input" placeholder="What's your cat's name?">
+    <div id="foreground_text" class="foregroundtextstyle">
+        <h1>Welcome to Cat!</h1>
+        <p>Enter your name to get started:</p>
+    </div>
+    <div id="foreground" class="foregroundstyle"></div>
+
+
+
+    <input type="text" id="name_input" placeholder="What's your name?">
+
     <header>
     </header>
 
     <main>
-        <section class="bars">
-            <img src="./final/happinessbar2.png" alt="happy bar" id="happiness_bar">
-            <img src="./final//hungerbar1.png" alt="hunger bar" id="hunger_bar">
-        </section>
+        <main>
+            <section class="bars">
+                <img src="../happinessbar2.png" alt="geluk bar" id="happennis_bar">
+                <img src="../hungerbar1.png" alt="honger bar" id="hunger_bar">
+            </section>
 
-        <section>
-            <figure id="cat_holder">
-                <img src="./final/catfull.png" alt="cat_default" id="cat">
-                
+        <main>
+            <section class="bars">
+                <img src="happinessbar2.png" alt="geluk bar" id="happennis_bar">
+                <img src="hungerbar1.png" alt="honger bar" id="hunger_bar">
+            </section>
+    
+            <section>
+                <figure id="panda_holder">
+                    <img src="catfull.png" alt="panda_default" id="panda">
+
+            <div id="tutorial" class="disappear"> <!--disappear van maken-->
+                <h1>Hoe werkt die spel?</h1>
+                    <section class="tutorial_toetsen">
+                        <h2>Controls</h2>
+                        <p> Druk: <strong>w</strong> om hem te laten <strong>springen</strong> </p>
+                        <p>Sleep: <img src="tunadark.png" alt="bamboo_foto"> om hem eten te geven </p>
+            </section>
+            
+            <section class="tutorial_bars">
+                    <h2>Uitleg bars</h2>
+                            <p><img src="tunadark.png" alt="bamboo_foto">= energie / honger bar</p>
+                            <p><img src="cat.png" alt="panda_head">= happenis bar</p>
+                        </section>
+                   
+                    
+                </figure>
+                <p id="greeting_text"></p>
+                <p id="food_thanks_text"></p>
+            </section>
+            <section class="objects">
+                <img src="tuna.png" alt="bamboo" id="bamboo">
+                <img src="sweater.png" alt="rood tshirt" id="red_tshirt">
+            </section>
+
             </figure>
             <p id="greeting_text"></p>
             <p id="food_thanks_text"></p>
         </section>
         <section class="objects">
-            <img src="./final/tuna.png" alt="tuna" id="tuna">
-            <img src="./final/sweater.png" alt="sweater" id="sweater">
+            <img src="tuna.png" alt="bamboo" id="bamboo">
+            <img src="sweater.png" alt="rood tshirt" id="red_tshirt">
         </section>
+        <div class="tutorial_en_questionmark">
+            <img src="question_button.png" alt="question mark"
+                id="question_mark">
+            <div id="tutorial" class="disappear">
+                <h1>Hoe werkt dit spel?</h1>
+                <section class="tutorial_toetsen">
+                    <h2>Controls</h2>
+                    <p> Druk: <strong>w</strong> om hem te laten <strong>springen</strong> </p>
+                    <p>Sleep: <img src="tunadark.png" alt="bamboo_foto"> om hem eten te geven </p>
+                    <p>Klik: <img src="sweatermini.png" alt="mini_tshirt">zodat hij een t-shirt
+                        krijgt </p>
+                </section>
 
-        <div id="tutorial" class="disappear"> 
-            <h1>How does this work?</h1>
-            <section class="tutorial_toetsen">
-                <h2>Controls</h2>
-                <p> Click: <strong>w</strong> to see your cat <strong>jump</strong> </p>
-                <p>Sleep: <img src="./final/tunadark.png" alt="tuna_dark"> to feed your cat </p>
-            </section>
-
-            <section class="tutorial_bars">
-                <h2>What are these bars</h2>
-                <p><img src="./final/tunadark.png" alt="tuna_dark">= energy / hunger bar</p>
-                <p><img src="./final/cat.png" alt="cat_head">= happiness bar</p>
-            </section>
-
+                <section class="tutorial_bars">
+                    <h2>Uitleg status bars</h2>
+                    <p><img src="tunadark.png" alt="bamboo_foto">= hunger bar</p>
+                    <p><img src="cat.png" alt="panda_head">= happiness bar</p>
+                    <p><strong>Let op:</strong> Om de <strong>15 seconden</strong> gaat de hunger en happiness bar omlaag
+                    </p>
+                </section>
+            </div>
         </div>
 
-        <img src="./final/question_button.png" alt="question mark" id="question_mark">
+        <audio src="./audio/eating_sound.mp3" id="eating_audio"></audio>
 
-        <audio src="./final/audio_eating_sound.mp3" id="eating_audio"></audio>
+        <footer>
+            <p>Bronnen:</p>
+            <ul>
+                <li>
+                    <a
+                        href="https://toppng.com/hd-transparent-images-pluspng-image-library-stock-panda-bear-clipart-PNG-free-PNG-Images_212318?search-result=panda">Panda</a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/watch?v=Tish3KkNnLc">Eet audio</a>
+                </li>
+            </ul>
+        
+            <p>Summer Aljoborys final for Web</p>
+        
+        </footer>
+</main>
 
-        <!-- TIJDELIJK-->
-        <p id="hupoints"></p>
-        <p id="hapoints">2</p>
+    <script src="./files/final.js"></script>
+    <script type="text/javascript">
+        if ('WebSocket' in window) {
+            (function () {
+                function refreshCSS() {
+                    var sheets = [].slice.call(document.getElementsByTagName("link"));
+                    var head = document.getElementsByTagName("head")[0];
+                    for (var i = 0; i < sheets.length; ++i) {
+                        var elem = sheets[i];
+                        var parent = elem.parentElement || head;
+                        parent.removeChild(elem);
+                        var rel = elem.rel;
+                        if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+                            var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+                            elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+                        }
+                        parent.appendChild(elem);
+                    }
+                }
+                var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+                var address = protocol + window.location.host + window.location.pathname + '/ws';
+                var socket = new WebSocket(address);
+                socket.onmessage = function (msg) {
+                    if (msg.data == 'reload') window.location.reload();
+                    else if (msg.data == 'refreshcss') refreshCSS();
+                };
+                if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+                    console.log('Live reload enabled.');
+                    sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+                }
+            })();
+        }
+        else {
+            console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+        }
+        // ]]>
+    </script>
+</body>
 
-    </main>
-    <footer>
-        <p>sources:</p>
-        <ul>
-            <li>
-                <a href="https://www.youtube.com/watch?v=Tish3KkNnLc">eating audio</a>
-            </li>
-        </ul>
-    </footer>
 
-    <script src="./final.js"></script>
-<!-- Code injected by live-server -->
-<script type="text/javascript">
-	// <![CDATA[  <-- For SVG support
-	if ('WebSocket' in window) {
-		(function () {
-			function refreshCSS() {
-				var sheets = [].slice.call(document.getElementsByTagName("link"));
-				var head = document.getElementsByTagName("head")[0];
-				for (var i = 0; i < sheets.length; ++i) {
-					var elem = sheets[i];
-					var parent = elem.parentElement || head;
-					parent.removeChild(elem);
-					var rel = elem.rel;
-					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
-						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
-						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
-					}
-					parent.appendChild(elem);
-				}
-			}
-			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
-			var address = protocol + window.location.host + window.location.pathname + '/ws';
-			var socket = new WebSocket(address);
-			socket.onmessage = function (msg) {
-				if (msg.data == 'reload') window.location.reload();
-				else if (msg.data == 'refreshcss') refreshCSS();
-			};
-			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
-				console.log('Live reload enabled.');
-				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
-			}
-		})();
-	}
-	else {
-		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
-	}
-	// ]]>
-</script>
-
-</body></html>
+</html>

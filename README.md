@@ -39,7 +39,7 @@
 - [WA6](https://dogloversum.github.io/wa/wa6/wa6.html)
 - [WA7](https://dogloversum.github.io/wa/wa7.html)
 - [WA9](https://dogloversum.github.io/wa/wa9.html)
-- WA10
+- [WA10](https://dogloversum.github.io/wa/wa10/wa10.html)
 - [WA11](https://dogloversum.github.io/wa/wa11/wa11.html)
 - [WA12](https://dogloversum.github.io/wa/wa12/wa12.html)
 - [WA13](https://dogloversum.github.io/wa/wa13/wa13.html)
