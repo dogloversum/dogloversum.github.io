@@ -7,7 +7,7 @@
     [https://dogloversum.github.io/html-midterm/page5.html](https://dogloversum.github.io/html-midterm/page5.html)
 * CSS
     (https://dogloversum.github.io/)
-* JS ()
+* JS (https://dogloversum.github.io/)
 
 ### **In-Class Assignments**
 
