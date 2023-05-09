@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://127.0.0.1:5500/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./cat_files/style.css">
+    <title>cat</title>
+</head>
+
+<body>
+        
+
+    <input type="text" id="name_input" placeholder="What's your name?">
+    <header>
+    </header>
+
+    <main>
+        <section class="bars">
+            <img src="./cat_files/happennis_bar_2.png" alt="happennis bar" id="happennis_bar">
+            <img src="./cat_files/hunger_bar_1.png" alt="hunger bar" id="hunger_bar">
+        </section>
+
+        <section>
+            <figure id="cat_holder">
+                <img src="./cat_files/cat_default.png" alt="cat_default" id="cat">
+                
+            </figure>
+            <p id="greeting_text"></p>
+            <p id="food_thanks_text"></p>
+        </section>
+        <section class="objects">
+            <img src="./cat_files/tuna.png" alt="tuna" id="tuna">
+            <img src="./cat_files/red_tshirt.png" alt="rood tshirt" id="red_tshirt">
+        </section>
+
+        <div id="tutorial" class="disappear"> 
+            <h1>How does this work?</h1>
+            <section class="tutorial_toetsen">
+                <h2>Controls</h2>
+                <p> Click <strong>W</strong> to make your cat <strong>jump</strong> </p>
+                <p>Drag: <img src="./cat_files/tuna_mini.png" alt="tuna_foto">to feed your cat </p>
+            </section>
+
+            <section class="tutorial_bars">
+                <h2>Explaining bars</h2>
+                <p><img src="./cat_files/tuna_mini.png" alt="tuna_foto">= energy / hunger bar</p>
+                <p><img src="./cat_files/cat_head.png" alt="cat_head">= happiness bar</p>
+            </section>
+
+        </div>
+
+        <img src="./cat_files/question_button.png" alt="question mark" id="question_mark">
+
+        <audio src="./audio/eating_sound.mp3" id="eating_audio"></audio>
+
+        <p id="hupoints"></p>
+        <p id="hapoints">2</p>
+
+    </main>
+    <footer>
+        <p>sources:</p>
+        <ul>
+            <li>
+                <a href="https://www.cheunyinzhang.com/"></a>
+            </li>
+            <li>
+                <a href="https://www.youtube.com/watch?v=Tish3KkNnLc">eating audio</a>
+            </li>
+        </ul>
+    </footer>
+
+    <script src="./cat_files/script.js"></script>
+<!-- Code injected by live-server -->
+<script type="text/javascript">
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+</body></html>

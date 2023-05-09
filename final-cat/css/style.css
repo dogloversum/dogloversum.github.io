@@ -1,0 +1,235 @@
+
+@font-face {
+    font-family: "Farro";
+    src: url("../assets/fonts/farro_light.ttf");
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: "Farro";
+    src: url("../assets/fonts/farro_regular.ttf");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Farro";
+    src: url("../assets/fonts/farro_medium.ttf");
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "Farro";
+    src: url("../assets/fonts/farro_bold.ttf");
+    font-weight: 600;
+}
+
+
+body {
+    font-family: "Farro, Helvetica";
+    padding: 1px;
+    margin: 0;
+    font-weight: 400;
+    background-color: plum;
+}
+
+
+
+#name_input {
+    position: absolute;
+    background-color: transparent;
+    border-color: transparent;
+    padding-bottom: 8px;
+    border-bottom: solid black 8px;
+    border-radius: 8px;
+    text-align: center;
+    outline: transparent;
+    font-size: 30px;
+    left: 0;
+    right: 0;
+    top: 280px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Farro', Helvetica;
+    font-weight: 300;
+    z-index: 3;
+}
+
+.foregroundstyle {
+    background-color: plum;
+    position: absolute;
+    height: 1080px;
+    width: 1920px;
+    z-index: 2;
+}
+
+.foregroundtextstyle {
+    z-index: 3;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 28px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.foregroundtextstyle h1,
+.foregroundtextstyle p {
+    text-align: center;
+    font-family: "Farro";
+}
+
+
+main {
+    position: relative;
+    width: 1000px;
+    height: 1000px;
+    z-index: 1;
+}
+
+.disappear {
+    display: none;
+}
+
+
+
+.bars {
+    display: flex;
+    flex-direction: column;
+    float: right;
+    margin: 8px 88px 0px 0px;
+}
+
+.bars h1 {
+    font-family: "Farro";
+    font-size: 28px;
+}
+
+
+.bars img {
+    width: 400x;
+    height: 200px;
+
+}
+
+#tutorial {
+    background-color: pink;
+    width: fit-content;
+    height: fit-content;
+    padding: 8px 12px 8px 12px;
+    border-radius: 8px;
+}
+
+
+section:nth-of-type(4) p,
+h2 {
+    font-family: "Farro, Helvetica";
+}
+
+#cat_holder {
+    position: absolute;
+    top: 480px;
+    left: 770px;
+}
+
+p img {
+    height: 40px;
+    width: 45px;
+}
+
+#cat {
+    height: 380px;
+    width: 380px;
+    position: absolute;
+
+}
+
+#cat_ogen {
+    height: 380px;
+    width: 380px;
+    position: relative;
+
+}
+
+.tutorial_en_questionmark {
+    position: absolute;
+    left: 88px;
+    top: 88px;
+}
+
+#question_mark {
+    height: 80px;
+    top: 10px;
+    cursor: pointer;
+    margin-bottom: 18px;
+}
+
+.objects {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 480px;
+    left: 480px;
+}
+
+
+.text_box {
+    position: absolute;
+    width: fit-content;
+    background-color: pink;
+    text-align: center;
+    padding: 18px 18px 18px 18px;
+    border-radius: 2px;
+    font-family: 'Farro', Helvetica;
+    font-size: 28px;
+    top: 400px;
+    left: 770px;
+
+
+}
+
+
+#red_tshirt {
+    height: 200px;
+    width: 300px;
+    cursor: move;
+}
+#tuna{
+    height: 100px;
+    width: 200px;
+    cursor: move;
+}
+
+#tutorial h1,
+#tutorial h2,
+#tutorial p {
+    font-family: "Farro";
+}
+
+#red_tshirt {
+    cursor: pointer;
+}
+
+
+#catdefault {
+    font-family: 'Farro', Helvetica;
+}
+
+
+footer p,
+footer a {
+    font-family: "Farro";
+}
+
+footer p:last-child {
+    text-align: center;
+}
+
+.jump {
+    animation: jump 1s forwards;
+}
+
+@keyframes jump {
+    40% {
+        transform: translateY(-15vh)
+    }
+}
