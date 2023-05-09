@@ -8,7 +8,7 @@
 * CSS
     (https://dogloversum.github.io/)
 * JS 
-    [Pet Cat](https://dogloversum.github.io/final-cat/final-cat/cattama.html)
+    [Pet Cat](https://dogloversum.github.io/final-cat/cattama.html)
 
 ### **In-Class Assignments**
 
